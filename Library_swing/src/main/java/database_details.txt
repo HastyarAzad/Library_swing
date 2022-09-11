@@ -1,0 +1,41 @@
+create database library_swing_application_programming;
+# username: hastyar         Password: Hastyar123
+# you can change these settings in DBConnection.java file inside src/controllers package
+
+create table users (
+    id int auto_increment not null,
+    name varchar(100),
+    email varchar(100),
+    address varchar(100),
+    code int,
+    username varchar(100),
+    password varchar(100),
+    primary key(id)
+);
+create table books (
+    id int auto_increment not null,
+    name varchar(100),
+    author varchar(100),
+    department varchar(100),
+    page_number int,
+    route varchar(200),
+    primary key (id)
+);
+show tables;
+select * from users;
+# drop table users;
+
+select * from books;
+# truncate table books;
+# drop table books;
+
+insert into users (id, name, email, address, code, username, password)
+values (null,'hastyar','hastyar.azadf17@komar.edu.iq','sulaimani/chwarchra','170001','hastyar','Hastyar123');
+
+insert into books (id, name, author, department, page_number, route)
+value (null,'java development','hastyar','computer',1221,'books/Computer/java development.pdf');
+
+select route from books where (name = 'Software Engineering');
+select route from books where (id = '2');
+
+
